@@ -21,6 +21,10 @@ public class Movement : MonoBehaviour
     [SerializeField] float stepWait = .5f;
     [SerializeField] float jumpForce = 10f;
 
+    public Key rightKey = Key.D;
+    public Key leftKey = Key.A;
+    public Key jumpKey = Key.W;
+
     private bool isGrounded;
 
     public float positionRadius;
@@ -38,12 +42,12 @@ public class Movement : MonoBehaviour
 
     void Update()
     {      
-        if(Keyboard.current.dKey.isPressed)
+        if(Keyboard.current[rightKey].isPressed)
         {
             animator.Play("WalkRight");
             StartCoroutine(MoveRight(stepWait));
         }
-        else if(Keyboard.current.aKey.isPressed)
+        else if(Keyboard.current[leftKey].isPressed)
         {
             animator.Play("WalkLeft");
             StartCoroutine(MoveLeft(stepWait));
@@ -55,9 +59,9 @@ public class Movement : MonoBehaviour
         
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, positionRadius,ground);
 
-        if((isGrounded == true && Keyboard.current.wKey.isPressed) || (isGrounded == true && Keyboard.current.spaceKey.isPressed))
+        if(isGrounded == true && Keyboard.current[jumpKey].isPressed)
         {
-            rb.AddForce(Vector2.up * jumpForce);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
 
