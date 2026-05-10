@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,9 +18,9 @@ public class Movement : MonoBehaviour
 
     public Animator animator;
 
-    [SerializeField] float speed = 1.5f;
+    public float speed = 1.5f;
     [SerializeField] float stepWait = .5f;
-    [SerializeField] float jumpForce = 10f;
+    public float jumpForce = 10f;
     [SerializeField] float jumpCooldown = 0.2f;
 
     public Key rightKey = Key.D;

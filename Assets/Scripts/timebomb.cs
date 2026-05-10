@@ -9,7 +9,7 @@ public class TimeBomb : MonoBehaviour
         
         if (collider.gameObject.CompareTag("BombTrigger"))
         {
-            Debug.LogWarning("Collider just got triggered");
+            // Debug.LogWarning("Collider just got triggered");
 
             GameObject leftArm = collider.transform.parent.parent.Find("LowerLeftArm").gameObject;
 
