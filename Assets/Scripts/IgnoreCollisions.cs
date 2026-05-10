@@ -1,25 +1,43 @@
 using UnityEngine;
 
-public class IgnoreCollsions : MonoBehaviour
+public class IgnoreCollisions : MonoBehaviour
 {
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         var colliders = GetComponentsInChildren<Collider2D>();
-
-        for(int i =0; i < colliders.Length; i++)
+        for (int i = 0; i < colliders.Length; i++)
         {
-            for(int k = i+1; k < colliders.Length; k++)
-         {
+            for (int k = i + 1; k < colliders.Length; k++)
+            {
+                if (colliders[i].CompareTag("Bomb") || colliders[k].CompareTag("Bomb"))
+                {
+                    continue;
+                }
+
                 Physics2D.IgnoreCollision(colliders[i], colliders[k]);
             }
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D coll)
+    // Update is called once per frame
+    void Update()
     {
-        if (coll.gameObject.tag == "Player")
+        
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bomb"))
         {
-            Physics2D.IgnoreCollision(this.gameObject.GetComponent<Collider2D>(), coll.gameObject.GetComponent<Collider2D>());
+            return;
+        }
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Physics2D.IgnoreCollision(
+                this.gameObject.GetComponent<Collider2D>(),
+                collision.gameObject.GetComponent<Collider2D>()
+            );
         }
     }
 }
