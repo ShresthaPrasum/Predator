@@ -20,12 +20,14 @@ public class Movement : MonoBehaviour
     [SerializeField] float speed = 1.5f;
     [SerializeField] float stepWait = .5f;
     [SerializeField] float jumpForce = 10f;
+    [SerializeField] float jumpCooldown = 0.2f;
 
     public Key rightKey = Key.D;
     public Key leftKey = Key.A;
     public Key jumpKey = Key.W;
 
     private bool isGrounded;
+    private float nextJumpTime;
 
     public float positionRadius;
 
@@ -57,10 +59,11 @@ public class Movement : MonoBehaviour
             animator.Play("Idle");
         }    
         
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, positionRadius,ground);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, positionRadius, ground);
 
-        if(isGrounded == true && Keyboard.current[jumpKey].isPressed)
+        if (isGrounded && Keyboard.current[jumpKey].wasPressedThisFrame && Time.time >= nextJumpTime)
         {
+            nextJumpTime = Time.time + jumpCooldown;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
