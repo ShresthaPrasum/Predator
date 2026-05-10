@@ -343,7 +343,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.805, y: -4.338, z: 0}
-  m_LocalScale: {x: 64.358826, y: 29.254648, z: 1}
+  m_LocalScale: {x: 36.68453, y: 29.254648, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1064126174}
@@ -358,7 +358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55640627}
   - component: {fileID: 55640628}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Square (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,7 +1769,7 @@ GameObject:
   - component: {fileID: 584273461}
   - component: {fileID: 584273459}
   - component: {fileID: 584273458}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1790,6 +1790,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1777920047}
+  - {fileID: 1352459996}
   m_Father: {fileID: 1363462070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &584273458
@@ -2595,7 +2596,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1594047433}
-  - {fileID: 1352699038}
   m_Father: {fileID: 1617348622}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!70 &704770466
@@ -20733,6 +20733,84 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 10.55, y: 3.35}
   m_EdgeRadius: 0
+--- !u!1 &1352459995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1352459996}
+  - component: {fileID: 1352459997}
+  m_Layer: 0
+  m_Name: BombTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1352459996
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352459995}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.42, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 584273457}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1352459997
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352459995}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3.74, y: 31.27}
+  m_EdgeRadius: 0
 --- !u!1 &1352699036
 GameObject:
   m_ObjectHideFlags: 0
@@ -20746,9 +20824,11 @@ GameObject:
   - component: {fileID: 1352699040}
   - component: {fileID: 1352699039}
   - component: {fileID: 1352699041}
-  m_Layer: 0
+  - component: {fileID: 1352699042}
+  - component: {fileID: 1352699043}
+  m_Layer: 6
   m_Name: Bomb
-  m_TagString: Untagged
+  m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20820,12 +20900,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1352699036}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 3.9, y: 2.59, z: 0}
-  m_LocalScale: {x: 6.677106, y: 6.018825, z: 10.820706}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.47984916, y: -0.23209982, z: 0}
+  m_LocalScale: {x: 0.49266183, y: 0.49911156, z: 3.5327077}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 704770465}
+  m_Father: {fileID: 1617348622}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1352699039
 PolygonCollider2D:
@@ -20857,7 +20937,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -20982,7 +21062,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.12880519, y: -0.61259055}
-  m_ConnectedAnchor: {x: 0.21291955, y: 1.7299514}
+  m_ConnectedAnchor: {x: 0.31292054, y: 2.139948}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -20992,6 +21072,40 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 50
     m_UpperAngle: -30
+--- !u!95 &1352699042
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352699036}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 00a9e57cd22337a41b14ae6ce8b7f688, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1352699043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352699036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379bebce393e8bc49a919a7a18e0e4d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeBomb
 --- !u!1 &1357248038
 GameObject:
   m_ObjectHideFlags: 0
@@ -21232,7 +21346,7 @@ GameObject:
   - component: {fileID: 1363462069}
   - component: {fileID: 1363462068}
   - component: {fileID: 1363462067}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Stickman (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21326,6 +21440,84 @@ Transform:
   - {fileID: 1626074721}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1387346623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1387346624}
+  - component: {fileID: 1387346625}
+  m_Layer: 0
+  m_Name: BombTrigger (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1387346624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387346623}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2145115479}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1387346625
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387346623}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3.74, y: 31.27}
+  m_EdgeRadius: 0
 --- !u!1 &1410934848
 GameObject:
   m_ObjectHideFlags: 0
@@ -22046,7 +22238,7 @@ GameObject:
   - component: {fileID: 1617348621}
   - component: {fileID: 1617348620}
   - component: {fileID: 1617348619}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Stickman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22132,6 +22324,7 @@ Transform:
   - {fileID: 1196510750}
   - {fileID: 1293408762}
   - {fileID: 1237400022}
+  - {fileID: 1352699038}
   - {fileID: 704770465}
   - {fileID: 1792803337}
   - {fileID: 1333912470}
@@ -22989,7 +23182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1777920047}
   - component: {fileID: 1777920048}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Square (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29795,7 +29988,7 @@ GameObject:
   - component: {fileID: 2145115483}
   - component: {fileID: 2145115481}
   - component: {fileID: 2145115480}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29816,6 +30009,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 55640627}
+  - {fileID: 1387346624}
   m_Father: {fileID: 1617348622}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &2145115480
