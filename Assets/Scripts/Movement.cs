@@ -10,6 +10,8 @@ public class Movement : MonoBehaviour
 
     public GameObject rightLeg;
 
+    public ParticleSystem movementParticleSystem;
+
     Rigidbody2D leftlegRb;
 
     Rigidbody2D rightlegRb;

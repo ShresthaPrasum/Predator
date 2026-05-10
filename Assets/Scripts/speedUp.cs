@@ -12,12 +12,17 @@ public class SpeedUp: MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.CompareTag("BombTrigger"))
         {
-            var movement = other.gameObject.GetComponent<Movement>();
+            var movement = other.gameObject.transform.parent.parent.GetComponent<Movement>();
             if (movement == null)
             {
                 return;
+            }
+
+            if (movement.movementParticleSystem != null)
+            {
+                movement.movementParticleSystem.Play();
             }
 
             if (!_originalSpeeds.ContainsKey(movement))
@@ -33,6 +38,10 @@ public class SpeedUp: MonoBehaviour
             }
 
             _resetRoutines[movement] = StartCoroutine(ResetSpeedAfterDelay(movement, Duration));
+
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+
         }
     }
 
@@ -43,6 +52,8 @@ public class SpeedUp: MonoBehaviour
         if (movement != null && _originalSpeeds.TryGetValue(movement, out var originalSpeed))
         {
             movement.speed = originalSpeed;
+
+
         }
 
         _originalSpeeds.Remove(movement);
