@@ -171,17 +171,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.031784534, y: 0.0020666122}
+  m_Offset: {x: -0.011124611, y: -0.003916025}
   m_SpriteTilingProperty:
     border: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 3.6, y: 3.6}
-    newSize: {x: 26.664377, y: 5.141845}
+    newSize: {x: 23.288559, y: 3.622183}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 26.290737, y: 4.8174343}
+  m_Size: {x: 23.015493, y: 3.29592}
   m_EdgeRadius: 0
 --- !u!212 &28729811
 SpriteRenderer:
@@ -237,7 +237,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 26.664377, y: 5.141845}
+  m_Size: {x: 23.288559, y: 3.622183}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -251,7 +251,7 @@ Transform:
   m_GameObject: {fileID: 28729809}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2138, y: -7.8722, z: 0}
+  m_LocalPosition: {x: 0.32374, y: -7.3488, z: 0}
   m_LocalScale: {x: 0.68887, y: 0.68887, z: 0.68887}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -342,8 +342,8 @@ Transform:
   m_GameObject: {fileID: 46451887}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2272, y: -3.5465, z: 0}
-  m_LocalScale: {x: 28.008755, y: 20.149273, z: 1}
+  m_LocalPosition: {x: 0.805, y: -4.338, z: 0}
+  m_LocalScale: {x: 36.68453, y: 29.254648, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1064126174}
@@ -581,10 +581,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -773,7 +773,7 @@ Transform:
   m_GameObject: {fileID: 249732010}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.4, y: 3.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 9.310997}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5708,10 +5708,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -6241,10 +6241,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -6843,10 +6843,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -7602,10 +7602,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -8248,7 +8248,7 @@ Transform:
   m_GameObject: {fileID: 817823000}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -89.11063, y: 3.5999997, z: 0}
   m_LocalScale: {x: 0.99990207, y: 1, z: 9.310997}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13487,10 +13487,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -13672,10 +13672,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -13869,10 +13869,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -19046,7 +19046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpeedUp
   Speed: 2
-  Duration: 5
+  Duration: 7
 --- !u!58 &1092136620
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -24271,10 +24271,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -24547,10 +24547,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -25138,10 +25138,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -30328,10 +30328,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -31983,10 +31983,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -32503,10 +32503,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -32931,10 +32931,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -33434,10 +33434,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -34002,10 +34002,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -39569,10 +39569,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -39785,10 +39785,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -45122,10 +45122,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 0.1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
