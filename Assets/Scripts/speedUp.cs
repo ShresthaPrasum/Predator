@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Splines.ExtrusionShapes;
 
 public class SpeedUp: MonoBehaviour
 {
@@ -41,13 +40,13 @@ public class SpeedUp: MonoBehaviour
 
             _resetRoutines[movement] = StartCoroutine(ResetSpeedAfterDelay(movement, Duration));
 
-            foreach (var sprite in gameObject.GetComponentsInChildren<SpriteRenderer>())
-            {
-                sprite.enabled = false;
-            }
+            // foreach (var sprite in gameObject.GetComponentsInChildren<SpriteRenderer>())
+            // {
+            //     sprite.enabled = false;
+            // }
 
 
-            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            // gameObject.GetComponent<CircleCollider2D>().enabled = false;
 
         }
     }
