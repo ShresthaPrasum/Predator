@@ -17,6 +17,7 @@ public class JumpBooster : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        var ParticleSystem = gameObject.GetComponentInChildren<ParticleSystem>();
         if (collision.CompareTag("BombTrigger"))
         {
             var movement = collision.gameObject.transform.parent.parent.GetComponent<Movement>();
@@ -51,6 +52,8 @@ public class JumpBooster : MonoBehaviour
             }
 
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
+
+            ParticleSystem.Stop();
         }
     }
     private IEnumerator ResetJumpAfterDelay(Movement movement, float seconds)
