@@ -47,6 +47,12 @@ public class Movement : MonoBehaviour
 
     void Update()
     {      
+        if (!GameManager.InputEnabled)
+        {
+            animator.Play("Idle");
+            return;
+        }
+
         if(Keyboard.current[rightKey].isPressed)
         {
             animator.Play("WalkRight");
