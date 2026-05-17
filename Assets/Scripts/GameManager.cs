@@ -8,18 +8,31 @@ public class GameManager : MonoBehaviour
     public static bool InputEnabled { get; private set; } = true;
 
     [SerializeField] private Canvas canvas;
+
     [SerializeField] private TextMeshProUGUI countdownText;
+
     [SerializeField] private TextMeshProUGUI gameTimerText;
+
     [SerializeField] private GameObject countdownPanel;
+
     [SerializeField] private GameObject winningPanel;
+
     [SerializeField] private TextMeshProUGUI winnerText;
+    
     [SerializeField] private Animator bombExplosionAnimator;
+
     [SerializeField] private string bombTag = "Bomb";
+
     [SerializeField] private string playerOneTag = "Player1";
+
     [SerializeField] private string playerTwoTag = "Player2";
+
     [SerializeField] private string explosionEndedParam = "hasEnded";
+
     [SerializeField] private float preStartSeconds = 3f;
+
     [SerializeField] private float gameMinutes = 2f;
+
     [SerializeField] private float loadDelay = 1f;
 
     private Coroutine countdownRoutine;
