@@ -10,6 +10,12 @@
 - RED: WAD
 - BLUE: Arror Key
 
+# TechStack
+- Unity 2d
+- ShaderLab
+- c#
+- Gemini Image Gen
+
 # DemoLink
 
 # [TIME_BOMB](https://shresthaprasum.itch.io/time-bomb)
