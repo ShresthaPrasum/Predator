@@ -7,6 +7,15 @@ public class shield : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     // Update is called once per frame
+
+    public AudioClip audioClip;
+
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+       audioSource = gameObject.AddComponent<AudioSource>(); 
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var ParticleSystem = gameObject.GetComponentInChildren<ParticleSystem>();
@@ -19,6 +28,8 @@ public class shield : MonoBehaviour
             {
                 movement.movementParticleSystem.Play();
             }
+
+            audioSource.PlayOneShot(audioClip);
 
             collision.gameObject.SetActive(false);
             StartCoroutine(ReactivateAfterDelay(collision.gameObject));

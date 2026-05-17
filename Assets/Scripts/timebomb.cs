@@ -3,6 +3,15 @@ using UnityEngine;
 
 public class TimeBomb : MonoBehaviour
 {
+
+    public AudioClip audioClip;
+
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+       audioSource = gameObject.AddComponent<AudioSource>(); 
+    }
     private void OnTriggerEnter2D(Collider2D collider)
     {
         HingeJoint2D hingejoint = gameObject.GetComponent<HingeJoint2D>();
@@ -20,6 +29,13 @@ public class TimeBomb : MonoBehaviour
             gameObject.transform.SetParent(leftArm.transform);
             
             gameObject.transform.localPosition = new Vector3(3f, 1f, 0f);
+        }
+    }
+    public void PlayExplosionSfx()
+    {
+        if (audioSource != null && audioClip != null)
+        {
+            audioSource.PlayOneShot(audioClip);
         }
     }
 }

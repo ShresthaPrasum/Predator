@@ -38,6 +38,15 @@ public class Movement : MonoBehaviour
 
     public Transform groundCheck;
 
+    public AudioClip audioClip;
+
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+       audioSource = gameObject.AddComponent<AudioSource>(); 
+    }
+
     void Start()
     {
         leftlegRb = leftLeg.GetComponent<Rigidbody2D>();
@@ -72,6 +81,7 @@ public class Movement : MonoBehaviour
 
         if (isGrounded && Keyboard.current[jumpKey].wasPressedThisFrame && Time.time >= nextJumpTime)
         {
+            audioSource.PlayOneShot(audioClip);
             nextJumpTime = Time.time + jumpCooldown;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }

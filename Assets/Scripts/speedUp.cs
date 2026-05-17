@@ -11,6 +11,15 @@ public class SpeedUp: MonoBehaviour
     private readonly Dictionary<Movement, float> _originalSpeeds = new();
     private readonly Dictionary<Movement, Coroutine> _resetRoutines = new();
 
+    public AudioClip audioClip;
+
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+       audioSource = gameObject.AddComponent<AudioSource>(); 
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         var ParticleSystem = gameObject.GetComponentInChildren<ParticleSystem>();
@@ -27,6 +36,8 @@ public class SpeedUp: MonoBehaviour
             {
                 movement.movementParticleSystem.Play();
             }
+
+            audioSource.PlayOneShot(audioClip);
 
             if (!_originalSpeeds.ContainsKey(movement))
             {

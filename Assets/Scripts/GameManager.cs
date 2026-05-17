@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
         if (gameTimerText != null)
         {
             gameTimerText.text = string.Empty;
+            gameTimerText.gameObject.SetActive(false);
         }
 
         if (countdownPanel != null)
@@ -60,7 +61,8 @@ public class GameManager : MonoBehaviour
         yield return RunPreStartCountdown();
 
         InputEnabled = true;
-        yield return RunGameCountdown();
+        float gameStartTime = Time.time;
+        yield return RunGameCountdown(gameStartTime);
 
         InputEnabled = false;
         yield return RunGameOverSequence();
@@ -90,7 +92,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private IEnumerator RunGameCountdown()
+    private IEnumerator RunGameCountdown(float startTime)
     {
         int totalSeconds = Mathf.Max(0, Mathf.CeilToInt(gameMinutes * 60f));
         if (gameTimerText != null)
@@ -98,16 +100,23 @@ public class GameManager : MonoBehaviour
             gameTimerText.gameObject.SetActive(true);
         }
 
-        for (int remaining = totalSeconds; remaining >= 0; remaining--)
+        while (true)
         {
-            int minutes = remaining / 60;
-            int seconds = remaining % 60;
+            int elapsedSeconds = Mathf.FloorToInt(Time.time - startTime);
+            int remainingSeconds = Mathf.Max(0, totalSeconds - elapsedSeconds);
+            int minutes = remainingSeconds / 60;
+            int seconds = remainingSeconds % 60;
             if (gameTimerText != null)
             {
                 gameTimerText.text = string.Format("{0}:{1:00}", minutes, seconds);
             }
 
-            yield return new WaitForSeconds(1f);
+            if (remainingSeconds <= 0)
+            {
+                break;
+            }
+
+            yield return null;
         }
     }
 

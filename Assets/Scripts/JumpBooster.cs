@@ -15,6 +15,14 @@ public class JumpBooster : MonoBehaviour
 
     private readonly Dictionary<Movement, Coroutine> _resetRoutines = new();
 
+    public AudioClip audioClip;
+
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+       audioSource = gameObject.AddComponent<AudioSource>(); 
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var ParticleSystem = gameObject.GetComponentInChildren<ParticleSystem>();
@@ -26,6 +34,8 @@ public class JumpBooster : MonoBehaviour
             {
                 return;
             }
+
+            audioSource.PlayOneShot(audioClip);
 
             if(movement.movementParticleSystem!= null)
             {
